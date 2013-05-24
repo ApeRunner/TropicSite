@@ -50,6 +50,47 @@ function validar_llenado($Campo, $Minimo=0, $Respuesta) {
 	
 }
 
+function validar_tel1($Campo, $Minimo=0) {	
+
+	//global $Respuesta_Array ;
+	global $Error_tel ;
+	global $_POST;
+	
+	$Input = trim($_POST[$Campo]) ;
+	 
+	if ( strlen($Input) <= $Minimo ) 	{
+		
+		 $Error_tel = 1; 
+		$Respuesta_Array[] = $Respuesta;
+	} elseif($Error_tel == 1){
+		$Error_tel = 0;
+	}
+		
+	
+	
+}
+
+function validar_tel2($Campo, $Minimo=0, $Respuesta) {	
+
+	global $Respuesta_Array ;
+	global $Error_tel ;
+	global $_POST;
+	
+	$Input = trim($_POST[$Campo]) ;
+	 
+	if ( strlen($Input) <= $Minimo ) 	{
+		
+		 $Error_tel = 1; 
+		$Respuesta_Array[] = $Respuesta;
+	} elseif($Error_tel == 1){
+		$Error_tel = 0;
+	}
+		
+	
+	
+}
+
+
 
 
 

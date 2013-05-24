@@ -36,6 +36,36 @@ function input_ratio($Metodo, $Campo, $Label, $Valor, $Estilo=NULL)
 
 
 
+function input_select($Campo, $Default, $Opciones, $Estilo=NULL) 
+{
+	if (isset($Estilo)) $style = "style='$Estilo'";
+	echo "<select name='$Campo' id='$Campo' $style> \n ";
+	reset($Opciones); // Point to the beginning
+	$Valor = current($Opciones);
+	while ($Valor) 
+	{
+		if ( $Default == $Valor) $Selected = 'selected="selected" '; 
+		else $Selected = ''; 
+		echo "<option value='$Valor' $Selected>$Valor </option> \n ";
+		$Valor = next($Opciones);
+	}
+	echo "</select> \n ";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

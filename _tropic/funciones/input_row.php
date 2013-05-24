@@ -6,7 +6,7 @@
 function input_row_text($Campo, $Estilo='width:300px') 
 {
 	global  $row ;
-	 $Valor = $row[$Campo];
+	 $Valor = htmlentities($row[$Campo], ENT_QUOTES);
 	echo "<input name='$Campo' id='$Campo' type='text' value='$Valor' style='$Estilo'>";
 }
 
@@ -17,7 +17,7 @@ function input_row_text($Campo, $Estilo='width:300px')
 function input_row_textarea($Campo, $Estilo='width:300px; height:100px') 
 {
 	global  $row ;
-	$Valor = $row[$Campo];
+	$Valor = htmlentities($row[$Campo], ENT_QUOTES);
 	echo "<textarea name='$Campo' id='$Campo' style='$Estilo'>$Valor</textarea>";
 }
 
@@ -60,7 +60,7 @@ function input_row_checkbox($Campo, $Estilo=NULL)
 function input_row_timestamp($Campo, $Estilo='width:300px') 
 {
 	global  $row ;
-	 $Valor = $row[$Campo];
+	 $Valor = htmlentities($row[$Campo], ENT_QUOTES);
 	echo "<input name='$Campo' id='$Campo' type='text' value='$Valor' class='Timestamp' style='$Estilo'>";
 	
 	
@@ -150,26 +150,15 @@ function input_row_relation($Campo, $Datos, $Estilo=NULL)
 
 
 
-
-
-
 // date()
 function input_row_date($Campo, $Estilo='width:200px') 
 {
+
 	global $row ;
-	
-	
-	
-	echo "<div class='input-control text datepicker' data-param-init-date='{$row[$Campo]}'>";
-	echo "<input type='text' name='".$Campo."' value='".$row[$Campo]."'></input>";
-	echo "<button class='btn-date'></button>";
-	echo "</div>";
+		
+	echo ("<input type='text' class='datepicker' name='".$Campo."' value=".$row[$Campo].">");
+
 }
 
 
-  
-
-
-  
-
-?>
+ ?>
