@@ -1,0 +1,42 @@
+.metrouicss .fg-color-custom {
+	color: #750000 !important;
+}
+
+.metrouicss .bg-color-custom {
+  background-color: #750000 !important;
+}
+
+.metrouicss .outline-color-custom {
+  outline-color: #750000 !important;
+}
+
+.metrouicss .nav-bar.bg-color-red .nav-bar-inner .menu li a:hover {
+  background-color: #750000 !important;
+}
+
+.metrouicss .page-sidebar > ul > li.sticker.sticker-color-red:before {
+  background-color: #750000 !important;
+}
+
+.larger {
+	font-size:larger !important;
+}
+
+
+.metrouicss table {
+	width:auto;
+	
+	}
+	
+	
+.metrouicss .data {
+	text-align:left;
+	
+	}
+
+
+.metrouicss h2 {
+	font-weight:bold;
+	
+	}
+
