@@ -1,8 +1,8 @@
 <?php 
 
 //Anti-SPAM
-$Incluir_JS[] = '../_tropic/antispam/trampa.js';
-$Incluir_CSS[] = '../_tropic/antispam/trampa.css';
+$Incluir_JS[] = '../_tropic/mod/antispam/trampa.js';
+$Incluir_CSS[] = '../_tropic/mod/antispam/trampa.css';
 
 
 
@@ -14,7 +14,7 @@ if ($_POST) {
 		$Respuesta_Array[] = 'Jodido robot!';
 		
 		// Rediregir
-		$Pagina = '../_tropic/antispam/blank.html';
+		$Pagina = '../_tropic/mod/antispam/blank.html';
 		header("Location: $Pagina ");
 		exit;
 
