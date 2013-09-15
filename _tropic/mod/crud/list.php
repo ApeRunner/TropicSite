@@ -2,10 +2,12 @@
 require '../_tropic/config/config.php';
 require "../_tropic/funciones/arrays.php";
 require "../_tropic/funciones/listado.php";
+
 require '../_tropic/funciones/ps_pagination/ps_pagination.php';
 
 
 
+$Incluir_CSS[]= '../_tropic/css/autocompletar.css';
 
 
 /*
@@ -79,17 +81,56 @@ $Result_Set = $pager->paginate();
 
 // HEADER HTML
 include '../global/header.php' ;
-include '../_tropic/crud/inc_submenu.php'; 
-include '../_tropic/crud/inc_h1.php'; 
-?>
+include '../_tropic/mod/crud/inc_submenu.php'; 
+include '../_tropic/mod/crud/inc_h1.php'; 
 
-        
-        
-        
-        
+
+//CAMPO BUSCAR
+if(sizeof($Campo_Buscar) > 0){
+$i=0;
+
+foreach ( $Campo_Buscar as $Campo ) {  include "../_tropic/funciones/autocompletar.php"; ?>
+    
+       
+
+<script>
+  $(function(){
+    var autocompletar = new Array();
+    <?php //Esto es un poco de php para obtener lo que necesitamos
+     for($p = 0;$p < count($arreglo_php); $p++){ //usamos count para saber cuantos elementos hay ?>
+       autocompletar.push('<?php echo $arreglo_php[$p]; ?>');
+     <?php } ?>
+     $("#buscar<?=$i?>").autocomplete({ //Usamos el ID de la caja de texto donde lo queremos
+       source: autocompletar //Le decimos que nuestra fuente es el arreglo
+     });
+  });
+</script>
+
+<form name="buscar<?=$i?>" method= 'get' action ='?ID_<?=$Label_Singular?>='> 
+  
+Buscar <?=$Campo?> de <?=$Label_Plural?>:<input type="text" name="ID_<?=$Label_Singular?>" id="buscar<?=$i?>" value="<?=$Buscar[$i]?>" />
+
+
+         <button type="submit" name="Enviar" value="Enviar" class="button bg-color-blue fg-color-white">
+         Ir
+        </button>
+</form>
+<br/>
+<br/>
+
+
+<?php $i++; } 
+
+
+}
+	
+	//ACABAN CAMPOS DE BÚSQUEDA
+	
+?> 
+<br/>
+<br/>
+
 <table cellpadding="5" cellspacing="0" class="striped hovered bordered" style="background-color:#FFFFFF" >
-
-
 
 <!-- Title Row -->
 <tr style="color:white; background-color:#565656" >

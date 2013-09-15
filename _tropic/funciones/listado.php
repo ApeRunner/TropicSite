@@ -31,7 +31,7 @@ function ordernar_por($Campo)
 		$Sentido = $Parte[1] ;
 		if ($Sentido=='ASC') { $Archivo = 'Sort_Arriba.png'; $Nuevo_Sentido = 'DESC';  }
 		else { $Archivo = 'Sort_Abajo.png'; $Nuevo_Sentido = 'ASC'; }
-		$Imagen = "<img src='../_global/graficos/icons/$Archivo' border='0' align='absmiddle' />";
+		$Imagen = "<img src='../_tropic/graficos/icons/$Archivo' border='0' align='absmiddle' />";
 	}
 	else
 	{

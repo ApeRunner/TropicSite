@@ -1,6 +1,6 @@
 <?php 
 
-
+/*
 function ordernar_por($Campo) 
 {
 	global $Sort ;
@@ -33,5 +33,5 @@ function ordernar_por($Campo)
 
 	return $HTML ; 
 }
-
+*/
 ?>

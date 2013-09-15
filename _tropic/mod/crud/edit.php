@@ -79,7 +79,7 @@ if (isset($_POST['Submit']))  {
 
 // HTML header
 include '../global/header.php' ;  
-include '../_tropic/crud/inc_submenu.php'; 
+include '../_tropic/mod/crud/inc_submenu.php'; 
 ?>
    
    
@@ -128,6 +128,7 @@ if ($Editar_Todos==0) { ?>
         <td align="left" valign="middle"> 
         <?php
         if($key[1]=='text') input_row_text($key[0]) ;
+        if($key[1]=='float') input_row_float($key[0]) ;
         if($key[1]=='textarea') input_row_textarea($key[0]) ;
         if($key[1]=='timestamp') input_row_timestamp($key[0]) ;
         if($key[1]=='select') input_row_select($key[0], $Opciones[$key[0]]) ;
