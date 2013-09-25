@@ -1,6 +1,5 @@
 <?php
 
-include '../_tropic/config/config.php';
 
 
 

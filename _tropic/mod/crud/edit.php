@@ -1,7 +1,6 @@
 <?php
 
 // Includes
-include '../_tropic/config/config.php';
 include "../_tropic/funciones/input_row.php";
 
 $Incluir_JS[]= '../global/css/Metro-UI/javascript/calendar.js';

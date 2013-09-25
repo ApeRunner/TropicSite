@@ -1,5 +1,4 @@
 <?php
-require '../_tropic/config/config.php';
 require "../_tropic/funciones/arrays.php";
 require "../_tropic/funciones/listado.php";
 
@@ -80,7 +79,7 @@ $Result_Set = $pager->paginate();
 
 
 // HEADER HTML
-include '../global/header.php' ;
+include '../global/header_crud.php' ;
 include '../_tropic/mod/crud/inc_submenu.php'; 
 include '../_tropic/mod/crud/inc_h1.php'; 
 
@@ -245,7 +244,7 @@ while( $row = mysql_fetch_assoc($Result_Set) ) {
 </div>                
 
 
-<?php include '../global/footer.php' ; ?>
+<?php include '../global/footer_crud.php' ; ?>
   
   
 

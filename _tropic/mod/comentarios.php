@@ -1,7 +1,7 @@
 <A NAME="Comentarios"></A>
 <?php
-include '../_global/funciones/input.php';
-include '../_global/funciones/validar2.php';
+include '../_tropic/funciones/input.php';
+include '../_tropic/funciones/validar.php';
 
 global $Error;
 
@@ -11,10 +11,6 @@ $Email = $_POST['Email'];
 $Comentario = $_POST['Comentario'];
 $page = $_SERVER['REQUEST_URI']; // SACA EL PATH DE LA URL
 
-
-//SELECCION DE BASE DE DATOS
-$dbh2 = mysql_connect('mexired.com', 'lumbre_mexired', 'pass1237', true);
-mysql_select_db('lumbre_sitiocursos', $dbh2);
 
 
 //SI SE HACE CLICK EN EL BOTON
@@ -100,7 +96,7 @@ if ($_POST['Submit']) {
 <br/>
 	<table border="1" cellpadding="0" cellspacing="2">
 <?php
-$result_comentario = mysql_query($query_comentario,$dbh2);
+$result_comentario = mysql_query($query_comentario);
 	while ($row_comentarios = mysql_fetch_array($result_comentario))
 	
 		{
