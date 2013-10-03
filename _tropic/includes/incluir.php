@@ -1,7 +1,6 @@
 <?php 
 
 
-print_r($Incluir_PHP);
 
 // Incluir archivos JavaScript dentro de tag <head>
 if ($Incluir_JS) 
