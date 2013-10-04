@@ -56,6 +56,8 @@ if ($_POST['Submit']) {
 //SE CREA EL FORMULARIO PARA DAR DE ALTA COMENTARIOS	 
 ?>
 <br/>
+<br/>
+<br/>
 <left> 	
 <table  border="0" cellpadding="0" cellspacing="10" 
     style="background-color:#E6E6E6; border:#CCC solid 1px;" >
@@ -93,8 +95,15 @@ if ($_POST['Submit']) {
 
 //QUERY PARA EXTRACCION DE COMENTARIOS
  $query_comentario = "SELECT ID_Comentario, Nombre, Comentario, DATE_FORMAT(Creado,'%d-%m-%Y %h:%i:%s') AS Creado FROM comentarios WHERE Page = '$page' ORDER BY ID_Comentario DESC LIMIT 10";
+ 
+ $res = mysql_query($query_comentario);
+ while ($row = mysql_fetch_array($res)){
+ $ID_Comentario = $row['ID_Comentario'];
+ }
+ 
 ?>
 <br/>
+<?php if($ID_Comentario > 0){ ?>
 <h3>Comentarios:</h3>
 <br/>
 	<table border="1" cellpadding="0" cellspacing="2">
@@ -124,4 +133,4 @@ $result_comentario = mysql_query($query_comentario);
 		
 		</table>
 	<br/>
-	
+<?php } ?>	
