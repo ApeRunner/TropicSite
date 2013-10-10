@@ -18,10 +18,9 @@
     <!-- CSS Custom -->
     <link href="<?=$raiz?>global/css/modern-custom.css" rel="stylesheet" type="text/css" />
     <link href="<?=$raiz?>global/css/varios.css" rel="stylesheet" type="text/css" />
-    <link href="<?=$raiz?>global/css/layout.css" rel="stylesheet" type="text/css" />
     
     <?php include './_tropic/includes/incluir.php'; // CSS, JS, PHP, HTML ?>
-     
+    
 </head>
 
 <body class="metrouicss">
@@ -30,7 +29,7 @@
         
         <?php require "page_top.php"; ?>
             
-        <div id="page_middle" align="left" style="width:960px; margin-top:30px;">
+        <div id="page_middle" align="left" style="width:960px; margin-top:30px; min-height:500px">
         
              <?php require "./_tropic/respuesta.php"; ?>
                 
